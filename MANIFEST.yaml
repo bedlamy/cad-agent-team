@@ -1,0 +1,29 @@
+project: cad-agent-team
+archive_version: "2026-11-17-public-redacted"
+language: ru
+purpose: "Public documentation, architecture, prompts, Skills, versioning and anonymized incident archive for CAD Agent Team"
+last_compiled_utc: "2026-11-17"
+status: "historical baseline; live state must be re-verified"
+components:
+  librechat: "v0.8.9-rc1 (reported)"
+  provider: "ez-ai"
+  freecad_mcp_bridge: "v0.1.30"
+  freecad: "1.1.4 reported by Skills Pack; earlier handoff did not confirm exact version"
+agents:
+  coordinator: "role only; deployment ID redacted"
+  analyst: "role only; deployment ID redacted"
+  builder: "role only; deployment ID redacted"
+  reviewer: "role only; deployment ID redacted"
+source_packages:
+  - "source-archives/CAD_Agent_Team_Package_2026-11-16_PUBLIC_REDACTED.zip"
+  - "source-archives/CAD_Agent_Team_Package_v2_2026-11-16_PUBLIC_REDACTED.zip"
+  - "source-archives/CAD_Agent_Team_Skills_v0.1_PUBLIC_REDACTED.zip"
+important_incidents:
+  - "docs/incidents/2026-11-16-ezai-coordinator-hang.md"
+  - "docs/incidents/2026-11-17-coordinator-overrun-summary.md"
+secrets_included: false
+public_release: true
+notes:
+  - "Three v3 prompt source texts (Analyst, Builder, Reviewer) are missing; hashes only."
+  - "Skills deployment later reported active; earlier handoffs preserve failed/rolled-back intermediate states."
+  - "Raw conversation/tool exports and customer CAD inputs are not published."

@@ -1,0 +1,26 @@
+# Secrets and local runtime state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*token*
+*credentials*
+*cookie*
+*.sqlite
+*.db
+*.bson
+*.archive
+
+# Local/editor/build artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log
+.tmp/

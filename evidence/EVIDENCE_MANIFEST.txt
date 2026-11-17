@@ -1,0 +1,9 @@
+CAD Agent Team archive handoff evidence manifest
+Prepared: 2026-11-17
+
+The archive contains the Markdown handoff and the three images uploaded in this conversation.
+No server-side configuration, credentials, private keys, database dumps, FCStd or STL originals were available in the current chat workspace.
+
+01_freecad_mcp_bridge_initial_settings.png	478886 bytes	SHA-256 5497ed73c786fdab6e381d76fdd593351a5b500131f40369ae2b6cfbbbd75ea8
+02_coordinator_hanging_request.png	98383 bytes	SHA-256 992ac5d975dcc866ad2908625e52025890f8dbdad00fccb4868b642796298fff
+03_successful_coordinator_analyst_subagent.png	370094 bytes	SHA-256 61b736e983a5c9ab167bbc01a699696912934638d92b0d74b8d3c3040b799028

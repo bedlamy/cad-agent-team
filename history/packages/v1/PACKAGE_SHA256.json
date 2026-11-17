@@ -1,0 +1,62 @@
+{
+  "package": "CAD Agent Team Package",
+  "version": "1.0",
+  "public_redacted": true,
+  "files": [
+    {
+      "path": "ACCEPTANCE_TESTS.md",
+      "size_bytes": 3045,
+      "sha256": "39a728bf2a3d17771d27a559b155ad4db72da6d249badd4bf8c7bcce6a14e915"
+    },
+    {
+      "path": "COMPUTER_TASK.md",
+      "size_bytes": 8639,
+      "sha256": "1aadc1acfff247bbaf2dff159e6b3ebc68e58f338d16e76e107731bb68296681"
+    },
+    {
+      "path": "MANIFEST.yaml",
+      "size_bytes": 2339,
+      "sha256": "affb6570ca45d0d6327dbb6a3fbf0bceab6711960fe21aae3e904e52c75fc561"
+    },
+    {
+      "path": "MCP_SAFETY.md",
+      "size_bytes": 3697,
+      "sha256": "ba94325ede9361d797d7b9e37421fee6f60bbc7422d348048a9a81e7dd45daf2"
+    },
+    {
+      "path": "MODEL_POLICY.md",
+      "size_bytes": 2490,
+      "sha256": "36eaee676d91a9887e430c5325642870f7bb0114f727225dbdbc96051cd24893"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2144,
+      "sha256": "bd7ff5efc12e495fb98e12a6821a58dd1bc662e5200e3facdc8ad6ab3a08adfe"
+    },
+    {
+      "path": "SOURCES.md",
+      "size_bytes": 1660,
+      "sha256": "534d787eec6da536cb163375254c71a34819fccd9fdd57a1b0ce93bbc4889b16"
+    },
+    {
+      "path": "agents/CAD_ANALYST.md",
+      "size_bytes": 3337,
+      "sha256": "14353812a56b2ad64faccc20bbcfd12119b23c73c382d126482753792b5bb1c8"
+    },
+    {
+      "path": "agents/CAD_BUILDER.md",
+      "size_bytes": 3933,
+      "sha256": "d089460935cfca0f596885edf97bbc41e88c5e70a49930b86c37e405b65b8984"
+    },
+    {
+      "path": "agents/CAD_COORDINATOR.md",
+      "size_bytes": 8758,
+      "sha256": "a09901c5714ce81ee12b0352b84349a82cfb56d86e437079e6af77e6c6c2b8d8"
+    },
+    {
+      "path": "agents/CAD_REVIEWER.md",
+      "size_bytes": 3621,
+      "sha256": "f6161321c7f95c689b586fb675b323752f709df7e9090e776fd6667cf7664e00"
+    }
+  ]
+}

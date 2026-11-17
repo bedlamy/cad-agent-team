@@ -1,0 +1,71 @@
+package: {name: cad-agent-team, version: "1.0", date: "2026-11-16"}
+target:
+  librechat_expected: "v0.8.9-rc1"
+  freecad_bridge_expected: "0.1.30"
+  endpoint: "ez-ai"
+  mcp_server: "freecad"
+  permission_mode: "Ask"
+  network_expected: "cad_mcp"
+  freecad_ip_expected: "<FREECAD_CONTAINER_IP>"
+  librechat_ip_expected: "<LIBRECHAT_CONTAINER_IP>"
+agents:
+  analyst:
+    name: "CAD Analyst"
+    id: "<ANALYST_AGENT_ID>"
+    prompt: "agents/CAD_ANALYST.md"
+    provider: "ez-ai"
+    model: "deepseek/deepseek-v4.1-flash"
+    reasoning_target: "low"
+    freecad_mcp: false
+  builder:
+    name: "CAD Builder"
+    id: "<BUILDER_AGENT_ID>"
+    prompt: "agents/CAD_BUILDER.md"
+    provider: "ez-ai"
+    model: "deepseek/deepseek-v4.1-flash"
+    reasoning_target: "medium"
+    freecad_mcp: false
+  reviewer:
+    name: "CAD Reviewer"
+    id: "<REVIEWER_AGENT_ID>"
+    prompt: "agents/CAD_REVIEWER.md"
+    provider: "ez-ai"
+    model: "deepseek/deepseek-v4.1-flash"
+    reasoning_target: "medium"
+    freecad_mcp: false
+  coordinator:
+    name: "CAD Coordinator"
+    id: "<COORDINATOR_AGENT_ID>"
+    prompt: "agents/CAD_COORDINATOR.md"
+    provider: "ez-ai"
+    model_priority:
+      - "GPT-6.1 Sol display label, only if present in live EZ AI catalog"
+      - "anthropic/claude-sonnet-5.5, only if exact ID is in catalog"
+      - "GPT-6 Astra display label, only if present in catalog"
+      - "deepseek/deepseek-v4.1-flash fallback"
+    reasoning_target: "high"
+    freecad_mcp: true
+    allowed_tools: [execute_python_mcp_freecad, get_output_page_mcp_freecad]
+    omit_by_default: [execute_python_file_mcp_freecad]
+    subagents:
+      enabled: true
+      allowSelf: false
+      shareFiles: true
+      agent_ids:
+        - "<ANALYST_AGENT_ID>"
+        - "<BUILDER_AGENT_ID>"
+        - "<REVIEWER_AGENT_ID>"
+model_policy:
+  specialist_confirmed_catalog_id: "deepseek/deepseek-v4.1-flash"
+  coordinator_previous_assignment_unverified: "anthropic/claude-sonnet-5.5"
+  apply_reasoning_only_if_live_endpoint_supports_it: true
+  if_unknown: "leave unset; do not change global endpoint config"
+safety:
+  no_mongodb_direct_writes: true
+  no_env_or_credentials_changes: true
+  no_compose_or_container_restarts: true
+  no_freecad_document_mutation_during_install: true
+  keep_ask: true
+  no_unrestricted: true
+  no_auto_approval: true
+  no_new_agents: true

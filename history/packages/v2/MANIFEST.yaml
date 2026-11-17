@@ -1,0 +1,45 @@
+package: {name: cad-agent-team, version: "2.0", date: "2026-11-16"}
+source_baseline:
+  librechat_expected: "v0.8.9-rc1"
+  provider: "ez-ai"
+  freecad_mcp_bridge_expected: "0.1.30"
+  bridge_mode_current_reported: "Ask"
+  mcp: "freecad"
+  mcp_tool_keys: [execute_python_mcp_freecad, get_output_page_mcp_freecad]
+  mcp_optional_omitted: [execute_python_file_mcp_freecad]
+ids:
+  analyst: "<ANALYST_AGENT_ID>"
+  builder: "<BUILDER_AGENT_ID>"
+  reviewer: "<REVIEWER_AGENT_ID>"
+  coordinator: "<COORDINATOR_AGENT_ID>"
+agents:
+  analyst: {name: "CAD Analyst", instructions: "agents/CAD_ANALYST.md", direct_mcp: true, logical_write_policy: false}
+  builder: {name: "CAD Builder", instructions: "agents/CAD_BUILDER.md", direct_mcp: true, logical_write_policy: true}
+  reviewer: {name: "CAD Reviewer", instructions: "agents/CAD_REVIEWER.md", direct_mcp: true, logical_write_policy: false}
+  coordinator: {name: "CAD Coordinator", instructions: "agents/CAD_COORDINATOR.md", direct_mcp: true, logical_write_policy: true}
+coordinator_subagents:
+  enabled: true
+  allowSelf: false
+  shareFiles: true
+  agent_ids: ["<ANALYST_AGENT_ID>", "<BUILDER_AGENT_ID>", "<REVIEWER_AGENT_ID>"]
+autonomy:
+  delegate_only_when_needed: true
+  sequential_live_freecad_operations: true
+  revision_before_and_after_each_logical_mutation: true
+  single_project_state_json: true
+  permission_mode_for_full_autonomy: "Unrestricted"
+  permission_mode_change_requires_explicit_informed_user_action: true
+  technical_readonly_enforcement: false
+  do_not_claim_revision_guarantee_before_tests: true
+versioning:
+  helper: "versioning/cad_revision.py"
+  preferred_install_path: "<CAD_AGENT_HOME>/bin/cad_revision.py"
+  preferred_project_root: "<CAD_WORKSPACE>/<project-slug>/"
+  state: "project_state.json"
+  log: "revision_log.json"
+  revisions: "revisions/*.FCStd"
+changes_prohibited:
+  - "Existing FreeCAD source STEP overwrite"
+  - "Docker Compose, MongoDB, credentials, TLS, network changes"
+  - "Unrestricted mode change without user's informed acceptance"
+  - "Concurrent writes in a single live FreeCAD session"

@@ -1,0 +1,77 @@
+{
+  "package": "CAD Agent Team",
+  "version": "2.0",
+  "public_redacted": true,
+  "files": [
+    {
+      "path": "ACCEPTANCE_TESTS.md",
+      "size_bytes": 3132,
+      "sha256": "0f5917f7d243a448267d57294f67c0613e6ecdc8169e868515ffe8a01a66707a"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "size_bytes": 7926,
+      "sha256": "dc0e0ffb5be3fbe97fc94022579ecc11d0c6386072e30cb672085dae2a4e4d55"
+    },
+    {
+      "path": "COMPUTER_TASK.md",
+      "size_bytes": 7735,
+      "sha256": "57b47f32950c3893c1022ec77251dbbdcb528e792c2d57aa972084ee4f98c874"
+    },
+    {
+      "path": "MANIFEST.yaml",
+      "size_bytes": 2077,
+      "sha256": "6a866500ba9a93ea76a3d7713988b28407dac90ac4f78c229daa0c4868040d0c"
+    },
+    {
+      "path": "MODEL_POLICY.md",
+      "size_bytes": 1791,
+      "sha256": "a01ff8eebc736aadc5b207a3fc4343e2f5cdec2c4ed476e0252a833c250a2f95"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4666,
+      "sha256": "5482bd3bf62d35037541126a82509870ea0324529685f92c07dd02eb5055f1ae"
+    },
+    {
+      "path": "SOURCES.md",
+      "size_bytes": 1262,
+      "sha256": "eb64e35e32427cf403fde658d59e665cb640881990c8db8025bb4a7308300540"
+    },
+    {
+      "path": "VERSIONING.md",
+      "size_bytes": 6506,
+      "sha256": "e8c79c6557c40505903bf14589830c9fdaa0dd728811097de4b7c01d1d541313"
+    },
+    {
+      "path": "agents/CAD_ANALYST.md",
+      "size_bytes": 2763,
+      "sha256": "964370f390c7cceda02b404baceb3e3058d89ca3dba8e19e89d9f9bfb16a25ac"
+    },
+    {
+      "path": "agents/CAD_BUILDER.md",
+      "size_bytes": 4684,
+      "sha256": "9b8ed7e9b51b7258e136a1ce32d54ec0defbaa2b3159c12b166451beeca8a99a"
+    },
+    {
+      "path": "agents/CAD_COORDINATOR.md",
+      "size_bytes": 7347,
+      "sha256": "39c35e7a4ca012367535593d0d76d0186c6743e683bc16d9ba33f657680d6e57"
+    },
+    {
+      "path": "agents/CAD_REVIEWER.md",
+      "size_bytes": 2470,
+      "sha256": "123eae3decae536a8d2c77694b1471b81d55eef25d92171b59986b8eb937cd22"
+    },
+    {
+      "path": "versioning/cad_revision.py",
+      "size_bytes": 7188,
+      "sha256": "aa3c26b3db8fb2d31d8fe1b138acde6404b2fb8133ba35239dba5e22d3ae3867"
+    },
+    {
+      "path": "versioning/test_revision.py",
+      "size_bytes": 1530,
+      "sha256": "069d4bb7f5320c5e31e834a5472266f92222622fbb5debe40cb2d2a14b96617e"
+    }
+  ]
+}
